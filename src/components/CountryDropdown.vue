@@ -1,18 +1,17 @@
 <template>
-  <div>
-
-  </div>
+    <b-nav-item-dropdown class="country-dropdown" text="Country" right>
+        <b-dropdown-item href="" v-for="country in countries" :key="country.alpha2Code">
+            {{ country.name }}
+        </b-dropdown-item>
+    </b-nav-item-dropdown>
 </template>
 
 <script>
 export default {
-  name: 'Home',
-  props: {
-      country: String,
-  },
+  name: 'CountryDropdown',
   data() {
       return {
-          articles: [],
+          countries: [],
       }
   },
   methods: {

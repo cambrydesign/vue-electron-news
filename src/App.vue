@@ -1,7 +1,13 @@
 <template>
 <div>
     <v-header></v-header>
+    <v-sidebar></v-sidebar>
     <b-container>
+        <b-row>
+            <b-col>
+                <b-button v-b-toggle.sidebar-filter>Filter News</b-button>
+            </b-col>
+        </b-row>
         <b-row>
             <b-col>
                 <router-view/>
@@ -13,9 +19,11 @@
 
 <script>
     import VHeader from "./components/VHeader";
+    import VSidebar from "./components/VSidebar";
     export default {
         components: {
-            VHeader
+            VHeader,
+            VSidebar,
         }
     }
 </script>
